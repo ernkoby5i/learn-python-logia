@@ -19,5 +19,19 @@ def f(a,b):
 
 
 
-wynik = f(9,3)
-print(f"{wynik=}")
+#wynik = f(9,3)
+#print(f"{wynik=}")
+
+
+
+
+
+def ile(n,cyfra):
+    if cyfra != 0:
+        wynik = 9*10**(n-1)-8*9**(n-1)
+    if cyfra==0:
+        wynik = 9*10**(n-1)-9**n
+
+    return wynik
+
+print(ile(9,9))
