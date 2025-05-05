@@ -2,6 +2,7 @@
 
 
 def kiedy(wchodze,spadam,belka):
+    print(f"kiedy({wchodze=} {spadam=} {belka=})")
     jestem_na = 0
     day = 0
     last = 0
@@ -18,6 +19,7 @@ def kiedy(wchodze,spadam,belka):
         jestem_na = jestem_na+wchodze
         day = day+1
 
+print(kiedy(300, 100, 100	))
 print(kiedy(5, 3, 2))
 
 
