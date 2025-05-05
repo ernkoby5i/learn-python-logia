@@ -1,27 +1,22 @@
 # Drugie - Ślimak https://logia.oeiizk.waw.pl/logia/page.php?sr=logia13/2etap
 
 
-def kiedy(rano,noc,spadek):
+def kiedy(wchodze,spadam,belka):
     jestem_na = 0
-    c = 0
-    dzien = 0
+    day = 0
+    last = 0
     while True:
-        c = c+1
-        if c%2!=0:
-            jestem_na = jestem_na + rano
-            dzien = dzien + 1
-        else:
-            jestem_na = jestem_na + noc
-            jestem_na= jestem_na - spadek
+        if jestem_na>=1000:
+            return day
+        last = (jestem_na//belka)*belka
 
-        if  jestem_na>=1000:
-            return dzien
+        if day!=0:
+            jestem_na = jestem_na - spadam
+        if jestem_na<last:
+            jestem_na = last
 
-        najblizsza_polka = (jestem_na // spadek) * spadek
-
-        if jestem_na < najblizsza_polka:
-            jestem_na = najblizsza_polka
-
+        jestem_na = jestem_na+wchodze
+        day = day+1
 
 print(kiedy(5, 3, 2))
 
