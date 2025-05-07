@@ -1,5 +1,4 @@
-#
-
+# zadanie Maxx - https://logia.oeiizk.waw.pl/logia/page.php?sr=logia08/2etap
 
 def MAXX(slowo):
     n = len(slowo)
