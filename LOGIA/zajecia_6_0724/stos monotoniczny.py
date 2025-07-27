@@ -1,6 +1,6 @@
 #m = int(input())
 m = 7
-w = 0
+
 #nasza_lista = list(map(int, input().split()))
 nasza_lista = [7, 1, 5, 3, 2, 6, 4]
 Stos = []
@@ -12,12 +12,12 @@ stos_indexow.append(0)
 for i in range(1,len(nasza_lista)):
 
     a = len(Stos)-1
-    if nasza_lista[i]<Stos[a]:
+    if nasza_lista[i]<=Stos[a]:
         Stos[a]=nasza_lista[i]
         stos_indexow[a]=i
     else:
         Stos.append(nasza_lista[i])
-        stos_indexow.append(w)
+        stos_indexow.append(i)
 
 bajtek_skoki = []
 bajtek_index = -1
