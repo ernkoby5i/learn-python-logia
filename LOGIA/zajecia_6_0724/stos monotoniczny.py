@@ -12,7 +12,7 @@ stos_indexow.append(0)
 for i in range(1,len(nasza_lista)):
 
     a = len(Stos)-1
-    if nasza_lista[i]<Stos[a]:
+    if nasza_lista[i]<=Stos[a]:
         Stos[a]=nasza_lista[i]
         stos_indexow[a]=i
     else:
