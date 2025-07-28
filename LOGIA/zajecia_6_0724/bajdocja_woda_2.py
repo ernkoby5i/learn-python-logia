@@ -71,6 +71,6 @@ def ile_wody(poziom_terenu):
 print(f"teren = {poziom_terenu} {ile_wody(poziom_terenu)=}")
 
 
+poziom_terenu = [1, 3, 4, 2, 3, 5, 2, 3, 2, 1, 2]
 
-
-
+print(f"teren = {poziom_terenu} {ile_wody(poziom_terenu)=}")
