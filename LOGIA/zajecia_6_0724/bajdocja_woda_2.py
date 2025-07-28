@@ -67,6 +67,7 @@ def ile_wody(poziom_terenu):
     return total_woda
 
 
+
 print(f"teren = {poziom_terenu} {ile_wody(poziom_terenu)=}")
 
 
