@@ -1,0 +1,24 @@
+
+#  @
+#  @ ~ ~ ~ @ @
+#  @ ~ ~ @ @ @ ~ @
+#  @ @ @ @ @ @ @ @ @
+#  0 1 2 3 4 5 6 7 8  - idx
+# [4 1 1 2 3 3 1 3 1] - poziom_terenu
+
+poziom_terenu = [4, 1, 1, 2, 3, 3, 1, 3, 1]
+# pomijam pierwszy i ostatni bo tam woda sie nie zbiera.
+# for i = 1..n-2 sprawdz boki max w lewo i max w prawo
+# z obu max wybieram miniejszy i jezeli to jest wieksze od mojego poziomu idx to to jest ilosc wodu ktora sie zebrala
+# przyklad: dla idx = 1
+#           poziom_terenu(idx=1) = 1
+#           max_na_lewo(1)  = 4
+#           max_na_prawo(1) = 3
+#           min(4,3) = 3
+#           min(4,3) - poziom(idx=1) = 3 - 1 = 2
+#           na pozycji idx=1 uzbiera sie slup wody o ilosci 2
+
+
+
+
+
