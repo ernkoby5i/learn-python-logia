@@ -4,9 +4,9 @@
 #  @ ~ ~ @ @ @ ~ @
 #  @ @ @ @ @ @ @ @ @
 #  0 1 2 3 4 5 6 7 8  - idx
-# [4 1 1 2 3 3 1 3 1] - poziom_terenu
+# [4 1 1 2 3 3 1 2 1] - poziom_terenu
 
-poziom_terenu = [4, 1, 1, 2, 3, 3, 1, 3, 1]
+poziom_terenu = [4, 1, 1, 2, 3, 3, 1, 2, 1]
 # pomijam pierwszy i ostatni bo tam woda sie nie zbiera.
 # for i = 1..n-2 sprawdz boki max w lewo i max w prawo
 # z obu max wybieram miniejszy i jezeli to jest wieksze od mojego poziomu idx to to jest ilosc wodu ktora sie zebrala
@@ -20,21 +20,17 @@ poziom_terenu = [4, 1, 1, 2, 3, 3, 1, 3, 1]
 
 def max_na_lewo(poziom_terenu, idx):
     max_prawo = 0
-    for i in range(1, idx):
-        if poziom_terenu[idx - i] >= max_prawo:
+    for i in range(0, len(poziom_terenu)-1):
+        if poziom_terenu[idx+i] >= max_prawo:
             max_prawo = poziom_terenu[idx - i]
-        else:
-            return max_prawo
+
     return 0
 
 def max_na_prawo(poziom_terenu, idx):
     max_lewo = 0
-    for i in range(1,idx):
+    for i in range(1,len(poziom_terenu)):
         if poziom_terenu[idx-i]>=max_lewo:
             max_lewo = poziom_terenu[idx-i]
-        else:
-            return max_lewo
-
 
     return 0
 
