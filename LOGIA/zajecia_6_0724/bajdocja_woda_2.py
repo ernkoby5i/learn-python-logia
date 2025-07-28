@@ -19,15 +19,23 @@ poziom_terenu = [4, 1, 1, 2, 3, 3, 1, 3, 1]
 #           na pozycji idx=1 uzbiera sie slup wody o ilosci 2
 
 def max_na_lewo(poziom_terenu, idx):
-    # wez pierwszy w lewo od idx i idz dalej
-    # jezeli taki sam albo rosnie to dalej
-    # jak zaczyna malec to koniec
+    max_prawo = 0
+    for i in range(1, idx):
+        if poziom_terenu[idx - i] >= max_prawo:
+            max_prawo = poziom_terenu[idx - i]
+        else:
+            return max_prawo
     return 0
 
 def max_na_prawo(poziom_terenu, idx):
-    # wez pierwszy w prawo od idx i idz dalej
-    # jezeli taki sam albo rosnie to dalej
-    # jak zaczyna malec to koniec
+    max_lewo = 0
+    for i in range(1,idx):
+        if poziom_terenu[idx-i]>=max_lewo:
+            max_lewo = poziom_terenu[idx-i]
+        else:
+            return max_lewo
+
+
     return 0
 
 def ile_wody_w_idx(poziom_terenu, idx):
@@ -58,4 +66,8 @@ def ile_wody(poziom_terenu):
 
 
 print(f"teren = {poziom_terenu} {ile_wody(poziom_terenu)=}")
+
+
+
+
 
