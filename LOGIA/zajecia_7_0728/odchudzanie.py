@@ -5,7 +5,7 @@ def nasza_waga(wagi):
     max_waga = wagi[0]
     max_schudnuecie = 0
 
-    for waga in wagi:
+    for waga in wagi[1:]: # zapis wagi[1:] bierze on [1..n-1] bo [0] mamy juz wykorzystany
         if waga>max_waga:
             max_waga = waga
         if (max_waga-waga)>max_schudnuecie:
