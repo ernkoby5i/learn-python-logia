@@ -14,11 +14,11 @@ def bajtek_max_zysk(odcinki):
     return max_sum
 
 
-lista_dochodow_na_odcinkach=[-1, -1]
+lista_dochodow_na_odcinkach=[-1, -1] # 0
 print(f'{lista_dochodow_na_odcinkach} {bajtek_max_zysk(lista_dochodow_na_odcinkach)=}')
 
-lista_dochodow_na_odcinkach=[1, 2, 3]
+lista_dochodow_na_odcinkach=[1, 2, 3] # 6
 print(f'{lista_dochodow_na_odcinkach} {bajtek_max_zysk(lista_dochodow_na_odcinkach)=}')
 
-lista_dochodow_na_odcinkach=[1, 2, -1, 3]
+lista_dochodow_na_odcinkach=[1, 2, -1, 3] # nie dziala powinno byc 6
 print(f'{lista_dochodow_na_odcinkach} {bajtek_max_zysk(lista_dochodow_na_odcinkach)=}')
