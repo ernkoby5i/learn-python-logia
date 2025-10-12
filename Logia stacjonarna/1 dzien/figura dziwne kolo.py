@@ -45,7 +45,7 @@ def czerwone(d):
     right(120)
     begin_fill()
     for i in range(0,12):
-        kolor = 'red'
+        kolor = '#FF4F47'
         fillcolor(kolor)
         begin_fill()
         print(trojkat(d))
@@ -53,7 +53,7 @@ def czerwone(d):
 
 def zielone(d):
     for i in range(0,12):
-        kolor = 'Olive'
+        kolor = '#808000'
         fillcolor(kolor)
         begin_fill()
         forward(50)
@@ -64,11 +64,11 @@ def zielone(d):
 def romb(d):
     left(60)
     forward(d)
-    kolor = 'yellow'
+    kolor = '#FFA500'
     fillcolor(kolor)
     begin_fill()
     for i in range(0,12):
-        kolor = 'yellow'
+        kolor = '#FFA500'
         fillcolor(kolor)
         right(30)
         forward(d)
