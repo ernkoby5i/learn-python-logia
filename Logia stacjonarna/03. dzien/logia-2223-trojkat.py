@@ -1,3 +1,4 @@
+# https://logia.oeiizk.waw.pl/strony/archiwalne/L23_zadania_e1.pdf
 #n = int(input())
 n = 4
 #p = int(input())

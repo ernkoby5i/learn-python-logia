@@ -1,3 +1,4 @@
+# https://logia.oeiizk.waw.pl/strony/archiwalne/L24_zadania_e1.pdf
 from turtle import *
 
 def trojkat(bok, kolor):

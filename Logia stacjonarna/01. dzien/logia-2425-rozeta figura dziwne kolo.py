@@ -1,3 +1,4 @@
+# https://logia.oeiizk.waw.pl/strony/archiwalne/L25_zadania_e1.pdf
 from turtle import *
 
 goto(0 , 0)

@@ -1,0 +1,1 @@
+# https://logia.oeiizk.waw.pl/strony/archiwalne/L21_zadania_e1.pdf
