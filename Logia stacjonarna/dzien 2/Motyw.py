@@ -1,10 +1,13 @@
 from turtle import *
 
-penup()
-goto(90, -90)
-s = pos()
 
-def Motyw(w):
+
+def Motyw():
+    w = 60
+    speed(0)
+    penup()
+    goto(90, -90)
+    s = pos()
     left(150)
     for i in range(0,4):
         right(60)
@@ -105,12 +108,8 @@ def Motyw(w):
 
 
 
-
-
-
-
-
 def szesc(d,pozycje):
+    pd()
     kolor = 'gold'
     fillcolor(kolor)
     begin_fill()
@@ -122,8 +121,10 @@ def szesc(d,pozycje):
         right(60)
     end_fill()
     forward(30)
+    pu()
 
 def maly(d,pozycje):
+    pd()
     end_fill()
     goto(pozycje[0])
     kolor = 'dark orange'
@@ -136,8 +137,11 @@ def maly(d,pozycje):
     goto(pozycje[5])
     goto(pozycje[0])
     end_fill()
+    pu()
 
-speed(0)
-pendown()
-print(Motyw(60))
-exitonclick()
+if __name__ == "__main__":
+    Motyw()
+
+
+
+
