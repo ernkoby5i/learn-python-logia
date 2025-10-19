@@ -23,9 +23,6 @@ def mozna_zrobic_K(kamykiT):
 # main
 for i in range(1,n+1):
     kamykiT = kamykiT + i
-    print(i)
-    print(kamykiT)
-    print("")
 
 while not mozna_zrobic_K(kamykiT):
     podstawa = podstawa+1
