@@ -16,3 +16,8 @@ def nasza_waga(wagi):
 wagi = [6, 7, 5, 4, 2]
 print(wagi,nasza_waga(wagi))
 
+wagi = [90, -90, 111, 4, 12]
+print(wagi,nasza_waga(wagi))
+
+wagi = [1,2,0]
+print(wagi,nasza_waga(wagi))
