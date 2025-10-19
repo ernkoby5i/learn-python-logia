@@ -49,7 +49,6 @@ def obramowkadown(kolor,bok):
 
 
 def caly():
-
     pu()
     n = 1
     dlugosc = 600 // n
