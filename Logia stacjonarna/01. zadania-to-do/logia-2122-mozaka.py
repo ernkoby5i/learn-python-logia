@@ -1,1 +1,0 @@
-# https://logia.oeiizk.waw.pl/strony/archiwalne/L22_zadania_e1.pdf
