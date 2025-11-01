@@ -26,7 +26,7 @@ def mozajka():
     goto(-200, 200)
     end_fill()
 
-    n = 7
+    n = int(input())
     kratki = 0
     kolory = ['green','orange']
     for i in range(2,n+1):

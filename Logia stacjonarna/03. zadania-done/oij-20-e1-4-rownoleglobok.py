@@ -3,4 +3,4 @@ wysokosc,szerokosc = map(int, input().split())
 
 for i in range(0,wysokosc):
     print(i * ' ',end="")
-    print(szerokosc*'*')
+    print(szerokosc * '*')
