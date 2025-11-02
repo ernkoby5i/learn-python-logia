@@ -1,0 +1,1 @@
+# https://logia.oeiizk.edu.pl/strony/dokumenty/etap1/L26_zadania_e1a.pdf
