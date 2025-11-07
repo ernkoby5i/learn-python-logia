@@ -21,16 +21,31 @@ def initConenction(bridge_ip: str | None = None):
     return HueClientUser(bridge_ip=BRIDGE_IP, user=USER, timeout=5)
 
 
+# Sample helper (place outside the class, e.g. in a script using the client)
+def print_groups_and_members(hue_client: HueClientUser) -> None:
+    """
+    Print each group and the lights that belong to it (id + name).
+    Uses HueClientUser.list_groups() and HueClientUser.list_lights().
+    """
+    groups = hue_client.get_groups_and_members() or []
+    light_map = {l["id"]: l.get("name") for l in hue_client.list_lights()}
 
-if __name__ == "__main__":
-    hue_client = initConenction(HUE_BRIDGE_IP)
-    hue_client.print_lights()
-    lights = hue_client.get_lights() or []
-    #lights = _print_lights()
-    if not lights:
-        print("No lights found, exiting.")
-        exit(0)
+    if not groups:
+        print("No groups found")
+        return
 
+    for g in groups:
+        gid = g.get("id")
+        gname = g.get("name") or "(no name)"
+        print(f"\n=== Group {gid} : {gname} ===")
+        members = g.get("lights", [])
+        if not members:
+            print("  (no lights in group)")
+            continue
+        for lid in members:
+            print(f"  - {lid} : {light_map.get(lid, '(unknown)')}")
+
+def run_animation_1(hue_client: HueClientUser, lights):
 
     first_id = lights[0]["id"]
     print(f"\nTurning {first_id} ON...")
@@ -67,6 +82,8 @@ if __name__ == "__main__":
     print("wait 3s\n")
     time.sleep(3)
 
+def run_animation_2(hue_client: HueClientUser, lights):
+    first_id = lights[0]["id"]
 
     print("czerwony")
     time.sleep(0.5)
@@ -98,8 +115,27 @@ if __name__ == "__main__":
     print("wait 3s\n")
     time.sleep(3)
 
+
+if __name__ == "__main__":
+    hue_client = initConenction(HUE_BRIDGE_IP)
+    lights = hue_client.get_lights() or []
+
+    # lights = _print_lights()
+    if not lights:
+        print("No lights found, exiting.")
+        exit(0)
+
     for l in lights:
         lid = l.get("id")
         name = l.get("nazwa") or l.get("name", "")
         print(f"\n=== Light {lid} ({name}) ===")
-        #hue_client.print_light_json(lid)
+        hue_client.print_light_json(lid)
+
+    hue_client.print_lights()
+    print_groups_and_members(hue_client)
+
+    run_animation_1(hue_client, lights)
+    run_animation_2(hue_client, lights)
+
+
+

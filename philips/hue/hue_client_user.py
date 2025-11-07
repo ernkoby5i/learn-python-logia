@@ -142,3 +142,34 @@ class HueClientUser:
             return None
         print(json.dumps(light, indent=2, ensure_ascii=False))
         return light
+
+    def get_groups(self) -> list[dict]:
+        """
+        Return simplified list of groups as dictionaries with keys:
+          - id
+          - nazwa (name)
+        """
+        raw = self.list_groups() or []
+        return [{"id": g.get("id"), "nazwa": g.get("name")} for g in raw]
+
+    def get_groups_and_members(self) -> List[Dict[str, Any]]:
+        """
+        Return detailed list of groups. Each item includes:
+          - id
+          - name
+          - lights (list of light ids)
+          - type (group type if present)
+        """
+        data = self._get("groups")
+        result: List[Dict[str, Any]] = []
+        if isinstance(data, dict):
+            for group_id, info in data.items():
+                result.append(
+                    {
+                        "id": group_id,
+                        "name": info.get("name"),
+                        "lights": info.get("lights", []),
+                        "type": info.get("type"),
+                    }
+                )
+        return result
