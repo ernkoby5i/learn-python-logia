@@ -1,3 +1,0 @@
-# https://logia.oeiizk.waw.pl/strony/archiwalne/L20_zadania_e1.pdf
-
-
