@@ -47,73 +47,47 @@ def print_groups_and_members(hue_client: HueClientUser) -> None:
 
 def run_animation_1(hue_client: HueClientUser, lights):
 
-    first_id = lights[5]["id"]
-    print(f"\nTurning {first_id} ON...")
+    ligt_id = lights[5]["id"]
+    print(f"\nTurning {ligt_id} ON...")
     sleep(1)
-    hue_client.set_light_on(first_id, True)
+    hue_client.set_light_on(ligt_id, True)
 
     print("brightness to 50%...")
     sleep(1)
-    hue_client.set_brightness(first_id, 50)
+    hue_client.set_brightness(ligt_id, 50)
 
     print("Setting color (xy) to warm-ish values.")
     sleep(1)
-    hue_client.set_color_xy(first_id, 0.4573, 0.41)
+    hue_client.set_color_xy(ligt_id, 0.4573, 0.41)
     print("wait 3s\n")
     time.sleep(3)
 
 
     print("Wylaczona")
     time.sleep(0.5)
-    hue_client.set_light_on(first_id, False)
+    hue_client.set_light_on(ligt_id, False)
     print("wait 3s\n")
     time.sleep(3)
 
 
     print("Wlaczona")
     time.sleep(0.5)
-    hue_client.set_light_on(first_id, True)
+    hue_client.set_light_on(ligt_id, True)
     print("wait 3s\n")
     time.sleep(3)
 
     print("brightness to 100%...")
     time.sleep(0.5)
-    hue_client.set_brightness(first_id, 100)
+    hue_client.set_brightness(ligt_id, 100)
     print("wait 3s\n")
     time.sleep(3)
+
+    return
 
 def run_animation_2(hue_client: HueClientUser, lights):
-    first_id = lights[0]["id"]
+    id = lights[5]["id"]
 
-    print("czerwony")
-    time.sleep(0.5)
-    hue_client.set_color_rgb(first_id, 255, 0, 0)  # czerwony
-    print("wait 3s\n")
-    time.sleep(3)
-
-    print("zielony")
-    time.sleep(0.5)
-    hue_client.set_color_rgb(first_id, 0, 255, 0)     # zielony
-    print("wait 3s\n")
-    time.sleep(3)
-
-    print("niebieski")
-    time.sleep(0.5)
-    hue_client.set_color_rgb(first_id, 0, 0, 255)     # niebieski
-    print("wait 3s\n")
-    time.sleep(3)
-
-    print("żółty")
-    time.sleep(0.5)
-    hue_client.set_color_rgb(first_id, 255, 255, 0)   # żółty
-    print("wait 3s\n")
-    time.sleep(3)
-
-    print("bilay")
-    time.sleep(1)
-    hue_client.set_color_rgb(first_id, 255, 255, 255)   # bilay
-    print("wait 3s\n")
-    time.sleep(3)
+    return
 
 def print_lights_details(lights):
     for l in lights:
