@@ -27,3 +27,4 @@ if __name__ == "__main__":
 
     start = 50
     max = 99
+    pos = start
