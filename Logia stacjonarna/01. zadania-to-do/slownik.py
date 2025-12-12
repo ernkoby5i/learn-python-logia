@@ -15,3 +15,45 @@ for item in lista:
 
 
 print(slownik)
+
+
+tekst = 'aaabbbaddc'
+#tekst = input()
+llista = list(tekst)
+
+slownik = {}
+
+for i in llista:
+    if i in slownik.keys():
+        slownik[i] = slownik[i]+1
+    else:
+        slownik[i] = 1
+print("---")
+print(f"{len(slownik)} {tekst} len={len(tekst)}")
+print(slownik)
+
+palindrom_dlugosc = 0
+palindorm_polowa=''
+
+for key in slownik.keys():
+    if slownik[key]>1:
+        dobre_litery = (slownik[key] // 2)
+        for i in range(dobre_litery):
+            palindorm_polowa += key
+        palindrom_dlugosc += dobre_litery *2
+        slownik[key] = slownik[key] - dobre_litery*2
+
+palindorm_srodek=''
+print(slownik)
+print(f"{palindrom_dlugosc=}")
+for key in slownik.keys():
+    if slownik[key]>0:
+        palindrom_dlugosc += 1
+        palindorm_srodek = key
+        break
+
+palindorm = palindorm_polowa + palindorm_srodek + palindorm_polowa[::-1]
+palindrom_dlugosc_final = len(palindorm)
+print(f"{palindorm=} {palindrom_dlugosc_final=}")
+print(slownik)
+print(f"")
