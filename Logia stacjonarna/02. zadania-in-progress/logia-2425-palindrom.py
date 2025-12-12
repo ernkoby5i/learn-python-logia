@@ -1,32 +1,45 @@
-tekst = 'abbbaddc'
-#tekst = input()
+tekst = 'abrakadabrahokuspokus'
 llista = list(tekst)
-lista = []
 slownik = {}
+
 for i in llista:
-    lista.append(i)
-
-
-for i in lista:
     if i in slownik:
-        slownik[i] = slownik[i]+1
+        slownik[i] += 1
     else:
         slownik[i] = 1
-print(slownik)
 
-slownik_ost = slownik
-le = len(slownik)
 naj_nie = 0
-
-
-
-for key in slownik.keys():
-    print(slownik[key])
-    if slownik[key]>naj_nie and slownik[key]%2!=0:
+naj_nie_lit = None
+for key in slownik:
+    if slownik[key] > naj_nie and slownik[key] % 2 != 0:
         naj_nie = slownik[key]
+        naj_nie_lit = key
+slownik_ost = slownik.copy()
 
-print(naj_nie)
+for i in list(slownik.keys()):
+    if i == naj_nie and slownik[i] % 2 != 0:
+        del slownik_ost[i]
+    elif i != naj_nie and slownik[i] % 2 != 0 and naj_nie_lit != i:
+        del slownik_ost[i]
+
+
+suma = 0
+for i in slownik_ost:
+    suma = suma+slownik_ost[i]
 
 
 
-print(slownik)
+slownik_ost = dict(sorted(slownik_ost.items(), key=lambda x: x[1]))
+
+
+for key in slownik_ost:
+    if slownik_ost[key] % 2 == 0:
+        print(key,end="")
+
+for key in slownik_ost:
+    if slownik_ost[key]%2!=0:
+        print(key*slownik_ost[key],end="")
+
+for key in reversed(list(slownik_ost)):
+    if slownik_ost[key] % 2 == 0:
+        print(key, end="")
