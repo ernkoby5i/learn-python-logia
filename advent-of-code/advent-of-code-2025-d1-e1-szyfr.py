@@ -5,7 +5,7 @@ import re
 
 from jupyter_client.session import new_id
 
-PATH = Path("./advent-of-code-2025-d1-e1-szyfr.txt")
+PATH = Path("advent-of-code-2025-d1-e1-szyfr.txt")
 #PATH = Path("./advent-of-code-2025-d1-e1-szyfr_test.txt")
 
 def parse_file(path: Path) -> list[tuple[str, int]]:

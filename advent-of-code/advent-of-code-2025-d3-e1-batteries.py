@@ -6,8 +6,8 @@ import re
 
 from jupyter_client.session import new_id
 
-f1 = Path("./advent-of-code-2025-d3-e1-batteries-test.txt")
-f2 = Path("./advent-of-code-2025-d3-e1-batteries-full.txt")
+f1 = Path("advent-of-code-2025-d3-e1-batteries-test.txt")
+f2 = Path("advent-of-code-2025-d3-e1-batteries-full.txt")
 
 def parse_file(file_path: Path, debug=False) -> list[str]:
     """Read file, find tokens like R12 or L234 and return list of tuples."""

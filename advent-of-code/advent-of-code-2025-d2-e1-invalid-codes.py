@@ -4,8 +4,8 @@ from pathlib import Path
 import re
 
 
-f1 = Path("./advent-of-code-2025-d1-e1-invalid-codes-test.txt")
-f2 = Path("./advent-of-code-2025-d1-e1-invalid-codes-full.txt")
+f1 = Path("advent-of-code-2025-d1-e1-invalid-codes-test.txt")
+f2 = Path("advent-of-code-2025-d1-e1-invalid-codes-full.txt")
 
 
 def parse_file(path: Path) -> list[tuple[str, int]]:
