@@ -18,84 +18,135 @@ def kwadrat(bok,kolor):
     pu()
 
 def a(bok):
+    zero = pos()
+    goto(zero[0], zero[1] + bok * 0)
+    kwadrat(bok, 'red')
 
-    goto(0,bok*0)
-    kwadrat(bok,'red')
 def b(bok):
-    goto(0, bok * 1)
+    zero = pos()
+    goto(zero[0], zero[1] + bok * 1)
     kwadrat(bok, 'red')
+
 def c(bok):
-    goto(0, bok * 2)
+    zero = pos()
+    goto(zero[0], zero[1] + bok * 2)
     kwadrat(bok, 'red')
+
 def d(bok):
-    goto(0, bok * 3)
+    zero = pos()
+    goto(zero[0], zero[1] + bok * 3)
     kwadrat(bok, 'red')
+
 def e(bok):
-    goto(0, bok * 4)
+    zero = pos()
+    goto(zero[0], zero[1] + bok * 4)
     kwadrat(bok, 'red')
+
 def f(bok):
-    goto(0, bok * 5)
+    zero = pos()
+    goto(zero[0], zero[1] + bok * 5)
     kwadrat(bok, 'red')
+
 def g(bok):
-    goto(0, bok * 6)
+    zero = pos()
+    goto(zero[0], zero[1] + bok * 6)
     kwadrat(bok, 'red')
+
 def h(bok):
-    goto(0, bok * 7)
+    zero = pos()
+    goto(zero[0], zero[1] + bok * 7)
     kwadrat(bok, 'red')
-def ii(bok):
-    goto(0, bok * 8)
+
+def i(bok):
+    zero = pos()
+    goto(zero[0], zero[1] + bok * 8)
     kwadrat(bok, 'red')
+
 def j(bok):
-    goto(0, bok * 9)
+    zero = pos()
+    goto(zero[0], zero[1] + bok * 9)
     kwadrat(bok, 'red')
+
 def k(bok):
-    goto(0, bok * 10)
+    zero = pos()
+    goto(zero[0], zero[1] + bok * 10)
     kwadrat(bok, 'red')
+
 def l(bok):
-    goto(0, bok * 11)
+    zero = pos()
+    goto(zero[0], zero[1] + bok * 11)
     kwadrat(bok, 'red')
+
 def m(bok):
-    goto(0, bok * 12)
+    zero = pos()
+    goto(zero[0], zero[1] + bok * 12)
     kwadrat(bok, 'red')
+
 def n(bok):
-    goto(bok, bok * 12)
+    zero = pos()
+    goto(zero[0] + bok, zero[1] + bok * 12)
     kwadrat(bok, 'red')
+
 def o(bok):
-    goto(bok, bok * 11)
+    zero = pos()
+    goto(zero[0] + bok, zero[1] + bok * 11)
     kwadrat(bok, 'red')
+
 def p(bok):
-    goto(bok, bok * 10)
+    zero = pos()
+    goto(zero[0] + bok, zero[1] + bok * 10)
     kwadrat(bok, 'red')
+
 def q(bok):
-    goto(bok, bok * 9)
+    zero = pos()
+    goto(zero[0] + bok, zero[1] + bok * 9)
     kwadrat(bok, 'red')
+
 def r(bok):
-    goto(bok, bok * 8)
+    zero = pos()
+    goto(zero[0] + bok, zero[1] + bok * 8)
     kwadrat(bok, 'red')
+
 def s(bok):
-    goto(bok, bok * 7)
+    zero = pos()
+    goto(zero[0] + bok, zero[1] + bok * 7)
     kwadrat(bok, 'red')
+
 def t(bok):
-    goto(bok, bok * 6)
+    zero = pos()
+    goto(zero[0] + bok, zero[1] + bok * 6)
     kwadrat(bok, 'red')
+
 def u(bok):
-    goto(bok, bok * 5)
+    zero = pos()
+    goto(zero[0] + bok, zero[1] + bok * 5)
     kwadrat(bok, 'red')
+
 def v(bok):
-    goto(bok, bok * 4)
+    zero = pos()
+    goto(zero[0] + bok, zero[1] + bok * 4)
     kwadrat(bok, 'red')
+
 def w(bok):
-    goto(bok, bok * 3)
+    zero = pos()
+    goto(zero[0] + bok, zero[1] + bok * 3)
     kwadrat(bok, 'red')
+
 def x(bok):
-    goto(bok, bok * 2)
+    zero = pos()
+    goto(zero[0] + bok, zero[1] + bok * 2)
     kwadrat(bok, 'red')
+
 def y(bok):
-    goto(bok, bok * 1)
+    zero = pos()
+    goto(zero[0] + bok, zero[1] + bok * 1)
     kwadrat(bok, 'red')
+
 def z(bok):
-    goto(bok, bok * 0)
+    zero = pos()
+    goto(zero[0] + bok, zero[1] + bok * 0)
     kwadrat(bok, 'red')
+
 
 
 def siatka(bok,szerokosc):
@@ -112,9 +163,13 @@ def siatka(bok,szerokosc):
 
 def caly():
     lista = ['a','b','c','d','e','f','g']
+    podstawa = pos()
     bok = 25
     siatka(bok,len(lista)*2)
+    speed(0)
+    goto(podstawa[0], podstawa[1])
     for i in lista:
+
         if i == 'a':
             zero = pos()
             a(bok)
@@ -249,6 +304,6 @@ def caly():
 
 
 pu()
-speed(0)
+speed(10000)
 caly()
 exitonclick()
