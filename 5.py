@@ -1,9 +1,2 @@
-l = input()
-def funkcja(l):
-    wynik = 0
-    for i in l:
-        if i!=" ":
-            wynik = wynik + ord(i)
-    return wynik
-
-print(funkcja(l))
+for i in range(0,26):
+    print(i+1,chr(i+ord('A')))
