@@ -57,7 +57,7 @@ def h(bok):
     goto(zero[0], zero[1] + bok * 7)
     kwadrat(bok, 'red')
 
-def i(bok):
+def ii(bok):
     zero = pos()
     goto(zero[0], zero[1] + bok * 8)
     kwadrat(bok, 'red')
@@ -150,19 +150,23 @@ def z(bok):
 
 
 def siatka(bok,szerokosc):
+    zero = pos()
     pd()
-    for j in range(1,szerokosc+1):
-        for i in range(0,13):
+    for i in range(1,szerokosc+1):
+        for j in range(0,13):
             kwadrat(bok,'white')
 
         pu()
-        goto(bok*j,0)
+        goto(zero[0]+(bok*i),zero[1])
         pd()
     pu()
 
 
 def caly():
     lista = ['a','b','c','d','e','f','g']
+    szerokosc = len(lista)*20
+    wysokosc = (13/2)*20
+    goto(-szerokosc, -wysokosc)
     podstawa = pos()
     bok = 25
     siatka(bok,len(lista)*2)
@@ -304,6 +308,6 @@ def caly():
 
 
 pu()
-speed(10000)
+speed(0)
 caly()
 exitonclick()
