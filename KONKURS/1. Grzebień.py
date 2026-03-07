@@ -1,0 +1,5 @@
+n = int(input())
+print("X "*(n-1)+'X')
+print("X "*(n-1)+'X')
+print("X "*(n-1)+'X')
+print('X'*n +'X'*(n-1))
