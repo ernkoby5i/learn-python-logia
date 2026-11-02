@@ -47,7 +47,7 @@ def print_groups_and_members(hue_client: HueClientUser) -> None:
 
 def run_animation_1(hue_client: HueClientUser, lights):
 
-    ligt_id = lights[5]["id"]
+    ligt_id = lights[0]["id"]
     print(f"\nTurning {ligt_id} ON...")
     sleep(1)
     hue_client.set_light_on(ligt_id, True)
@@ -96,7 +96,7 @@ def print_lights_details(lights):
         print(f"\n=== Light {lid} ({name}) ===")
         hue_client.print_light_json(lid)
 
-
+# 340
 if __name__ == "__main__":
     hue_client = initConenction(HUE_BRIDGE_IP)
     lights = hue_client.get_lights() or []

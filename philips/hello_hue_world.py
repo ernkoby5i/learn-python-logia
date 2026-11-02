@@ -83,37 +83,90 @@ def run_animation_1(hue_client: HueClientUser, lights):
     time.sleep(3)
 
 def run_animation_2(hue_client: HueClientUser, lights):
+
     first_id = lights[0]["id"]
+    kolory = ['rozowy','czerwony','zielony','niebieski','zolty','bialy','morski','pomaranczowy','fioletowy']
+    rgb = [[255, 20, 147],[255, 0, 0],[0, 255, 0],[0, 0, 255],[255, 215, 0],[255, 255, 255],[0, 105, 148],[255, 128, 0],[128, 0, 255]]
+    for i in range(0,9):
+        print(f'{kolory[i]} = r {rgb[i][0]}, g {rgb[i][1]}, b {rgb[i][2]}')
+        print('')
+    print(f'wprowac ile czerwonego:',end='')
+    r = int(input())
+    print(f"r = {r}")
 
-    print("czerwony")
-    time.sleep(0.5)
-    hue_client.set_color_rgb(first_id, 255, 0, 0)  # czerwony
-    print("wait 3s\n")
-    time.sleep(3)
+    print(f'wprowac ile zielonego:', end='')
+    g = int(input())
+    print(f"g = {g}")
 
-    print("zielony")
-    time.sleep(0.5)
-    hue_client.set_color_rgb(first_id, 0, 255, 0)     # zielony
-    print("wait 3s\n")
-    time.sleep(3)
+    print(f'wprowac ile niebieskiego:', end='')
+    b = int(input())
+    print(f"b = {b}")
 
-    print("niebieski")
-    time.sleep(0.5)
-    hue_client.set_color_rgb(first_id, 0, 0, 255)     # niebieski
-    print("wait 3s\n")
-    time.sleep(3)
+    hue_client.set_color_rgb(first_id, r, g, b)
+    # if n=="rozowy":
+    #     print("rozowy")
+    #     time.sleep(0.5)
+    #     hue_client.set_color_rgb(first_id,  255, 20, 147)  # rozowy
+    #     print("wait 3s\n")
+    #
+    # if n == "czerwony":
+    #     print("czerwony")
+    #     time.sleep(0.5)
+    #     hue_client.set_color_rgb(first_id, 255, 0, 0)  # czerwony
+    #     print("wait 3s\n")
+    #     time.sleep(3)
+    #
+    # if n == "zielony":
+    #     print("zielony")
+    #     time.sleep(0.5)
+    #     hue_client.set_color_rgb(first_id, 0, 255, 0)     # zielony
+    #     print("wait 3s\n")
+    #     time.sleep(3)
+    #
+    # if n == "niebieski":
+    #     print("niebieski")
+    #     time.sleep(0.5)
+    #     hue_client.set_color_rgb(first_id, 0, 0, 255)     # niebieski
+    #     print("wait 3s\n")
+    #     time.sleep(3)
+    #
+    # if n == "żółty":
+    #     print("żółty")
+    #     time.sleep(0.5)
+    #     hue_client.set_color_rgb(first_id, 255, 215, 0)   # żółty
+    #     print("wait 3s\n")
+    #     time.sleep(3)
+    #
+    # if n == "bilay":
+    #     print("bilay")
+    #     time.sleep(1)
+    #     hue_client.set_color_rgb(first_id, 255, 255, 255)   # bilay
+    #     print("wait 3s\n")
+    #     time.sleep(3)
+    #
+    # if n == "morski":
+    #     print("morski")
+    #     time.sleep(1)
+    #     hue_client.set_color_rgb(first_id, 0, 105, 148)  # morski
+    #     print("wait 3s\n")
+    #     time.sleep(3)
+    #
+    # if n == "pomaranczowy":
+    #     print("pomaranczowy")
+    #     time.sleep(1)
+    #     hue_client.set_color_rgb(first_id, 255, 128, 0)  # pomaranczowy
+    #     print("wait 3s\n")
+    #     time.sleep(3)
+    #
+    # if n == "fioletowy":
+    #     print("fioletowy")
+    #     time.sleep(1)
+    #     hue_client.set_color_rgb(first_id, 128, 0, 255) # fioletowy
+    #     print("wait 3s\n")
+    #     time.sleep(3)
 
-    print("żółty")
-    time.sleep(0.5)
-    hue_client.set_color_rgb(first_id, 255, 255, 0)   # żółty
-    print("wait 3s\n")
-    time.sleep(3)
 
-    print("bilay")
-    time.sleep(1)
-    hue_client.set_color_rgb(first_id, 255, 255, 255)   # bilay
-    print("wait 3s\n")
-    time.sleep(3)
+
 
 def print_lights_details(lights):
     for l in lights:
@@ -137,7 +190,7 @@ if __name__ == "__main__":
     hue_client.print_lights()
     print_groups_and_members(hue_client)
 
-    run_animation_1(hue_client, lights)
+    # run_animation_1(hue_client, lights)
     run_animation_2(hue_client, lights)
 
 
